@@ -7,12 +7,6 @@ document.getElementById("toggleTema").addEventListener("click", () => {
   // opcional: adicionar estilos para .modo-alternativo no CSS se quiser inversão de contraste
 });
 
-// Chatbot
-const chatbot = document.getElementById("chatbot");
-document.getElementById("btnAbrirChatbot").addEventListener("click", () => {
-  chatbot.classList.toggle("aberto");
-});
-
 // pequena função para escapar HTML de entrada do usuário
 function escapeHtml(str) {
   return str.replace(/[&<>"'\/]/g, function (s) {
@@ -21,10 +15,14 @@ function escapeHtml(str) {
   });
 }
 // ----------------- Chatbot -----------------
-function abrirChatbot() {
-  const chatbot = document.getElementById("meu-chatbot");
-  chatbot.style.display = chatbot.style.display === "none" ? "block" : "none";
-}
+const botaoChat = document.getElementById("btnAbrirChatbot");
+const dfMessenger = document.querySelector("df-messenger");
+
+
+botaoChat.addEventListener("click", () => {
+    dfMessenger.classList.toggle("aberto");
+    dfMessenger.setAttribute("opened", dfMessenger.classList.contains("aberto"));
+});
 
 // ----------------- Variáveis globais -----------------
 let stream = null;

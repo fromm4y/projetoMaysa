@@ -127,16 +127,14 @@
     </section>
 
     <!-- CHATBOT (ASIDE) -->
-    <aside id="chatbot" class="chatbot" aria-label="Janela do Chatbot">
-      <h3>🤖 Chatbot Oceandria</h3>
-      <div id="historicoChat" class="historico">
-        <p><strong>Bot:</strong> Olá! Como posso ajudar você hoje?</p>
-      </div>
-      <div class="chat-controls">
-        <input type="text" id="entradaChat" placeholder="Digite sua mensagem..." aria-label="Mensagem do usuário" />
-        <button id="enviarMensagem" aria-label="Enviar mensagem">Enviar</button>
-      </div>
-    </aside>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Chatbot-IA"
+      agent-id="7e9ea28d-fc2a-4f18-a435-1d31267d9a34"
+      language-code="pt-br">
+    </df-messenger>
 
   </main>
 
