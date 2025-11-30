@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Oceandria - Explorando os mistérios dos animais marinhos e suas curiosidades." />
+  <title>Oceandria - Fundo do Mar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>🌊 Oceandria</h1>
+      <p class="tagline">Explorando os segredos das profundezas</p>
+    </div>
+
+    <nav class="nav">
+      <a href="#curiosidades">Curiosidades</a>
+      <a href="#fatos">Fatos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="toggleTema" aria-label="Alternar modo claro/escuro">🌗</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-label="Hero - Oceandria">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Fundo do mar azul com peixes" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-texto">
+        <h2>Animais Marinhos</h2>
+        <h3>Proteger os mares é preservar a vida.</h3>
+        <p>Explore o fascinante mundo de Oceandria, onde cada criatura guarda um segredo das profundezas.</p>
+        <div class="botoes-hero">
+          <button id="abrirIA" aria-label="Iniciar reconhecimento facial">🎥 Reconhecimento Facial</button>
+          <button id="btnAbrirChatbot" aria-label="Abrir chatbot">💬 Abrir Chatbot</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades" class="curiosidades">
+      <div class="container">
+        <h2>Curiosidades</h2>
+        <ul>
+          <li>O baiacu incha até três vezes o seu tamanho para se defender.</li>
+          <li>Os golfinhos dormem com metade do cérebro ativo.</li>
+          <li>O tubarão-mangona tem aparência “mal-humorada” mas é inofensivo.</li>
+          <li>Leões-marinhos podem prender a respiração por até 20 minutos.</li>
+          <li>80% das espécies marinhas ainda não foram descobertas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FATOS -->
+    <section id="fatos" class="fatos">
+      <div class="container">
+        <h2>Fatos e Ciência</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Poluição Marinha</h3>
+            <p>Mais de 8 milhões de toneladas de plástico chegam aos oceanos todos os anos.</p>
+          </article>
+          <article class="card">
+            <h3>Recifes de Corais</h3>
+            <p>Abrigam cerca de 25% de todas as espécies marinhas conhecidas.</p>
+          </article>
+          <article class="card">
+            <h3>Zona Abissal</h3>
+            <p>A luz solar não alcança além de 200 metros de profundidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+     <!-- GALERIA -->
+    <section id="galeria" class="galeria">
+      <div class="container">
+        <h2>Galeria Oceânica</h2>
+        <div class="grid-galeria">
+          <figure><img src="https://img.freepik.com/fotos-gratis/casamentos-arte-e-comercial_181624-10618.jpg?semt=ais_hybrid&w=740&q=80" alt="Golfinho saltando"><figcaption>Golfinho saltando</figcaption></figure>
+          <figure><img src="https://www.infoescola.com/wp-content/uploads/2008/05/tartaruga-verde-112466255.jpg" alt="Tartaruga marinha"><figcaption>Tartaruga marinha</figcaption></figure>
+          <figure><img src="https://marsemfim.com.br/wp-content/uploads/2020/05/AA-c%C3%B3pia-3.jpg" alt="Baiacu inflado"><figcaption>Baiacu inflado</figcaption></figure>
+          <figure><img src="https://www.mundoecologia.com.br/wp-content/gallery/filhote-de-foca/Filhote-de-Foca-4.jpg" alt="Foca marinha"><figcaption>Foca Marinha</figcaption></figure>
+          <figure><img src="https://img.freepik.com/fotos-premium/um-tubarao-nadando-no-oceano-com-outros-tubaroes-ao-fundo_590200-581.jpg?w=360" alt="Tubarão nadando"><figcaption>Tubarão Nadando</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Perguntas Frequentes</h2>
+        <details>
+          <summary>Os golfinhos são peixes?</summary>
+          <p>Não, são mamíferos e respiram ar pelos pulmões.</p>
+        </details>
+        <details>
+          <summary>Por que o baiacu incha?</summary>
+          <p>Para se proteger de predadores, enchendo o corpo de ar ou água.</p>
+        </details>
+        <details>
+          <summary>Os tubarões dormem?</summary>
+          <p>Alguns mantêm o movimento constante para respirar, mas têm períodos de descanso.</p>
+        </details>
+        <details>
+          <summary>Os corais são plantas?</summary>
+          <p>Não, são animais que vivem em colônias e constroem recifes.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+      <div class="container">
+        <a href="#inicio" class="cta-link">🌊 Aprenda mais sobre o oceano</a>
+      </div>
+    </section>
+
+    <!-- CHATBOT (ASIDE) -->
+    <aside id="chatbot" class="chatbot" aria-label="Janela do Chatbot">
+      <h3>🤖 Chatbot Oceandria</h3>
+      <div id="historicoChat" class="historico">
+        <p><strong>Bot:</strong> Olá! Como posso ajudar você hoje?</p>
+      </div>
+      <div class="chat-controls">
+        <input type="text" id="entradaChat" placeholder="Digite sua mensagem..." aria-label="Mensagem do usuário" />
+        <button id="enviarMensagem" aria-label="Enviar mensagem">Enviar</button>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>Projeto Escolar – Oceandria © <span id="anoAtual"></span></p>
+    <a href="#inicio" class="voltar-topo">⬆️ Voltar ao topo</a>
+  </footer>
+
+  <!-- MODAL DE RECONHECIMENTO FACIAL -->
+  <div id="cameraModal" class="modal" aria-hidden="true" style="display:none;">
+    <div class="modal-content">
+      <button id="fecharModal" class="botao-fechar" title="Fechar">❌</button>
+      <h2 class="modal-title">Reconhecimento Facial</h2>
+      <div class="video-wrap">
+        <video id="video" autoplay muted playsinline></video>
+      </div>
+      <div class="controls">
+        <button id="tirarFoto" class="botao-foto" title="Tirar foto">📸</button>
+      </div>
+      <p id="modalStatus" class="modal-status">Aguardando...</p>
+      <canvas id="fotoCanvas" style="display:none;"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
